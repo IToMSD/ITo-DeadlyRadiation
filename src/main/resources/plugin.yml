@@ -1,0 +1,21 @@
+name: ITo-DeadlyRadiation
+version: '1.0'
+main: pl.polsatgranie.itomsd.deadlyRadiation.DeadlyRadiation
+api-version: '1.13'
+load: STARTUP
+authors: [ PolsatGraniePL ]
+description: IToMSD plugin
+website: https://itomsd.com/
+depend: [WorldGuard]
+permissions:
+  itomsd.deadlyradiation.bypass:
+    description: "The radiation zone won't kill you."
+    default: op
+  itomsd.deadlyradiation.admin:
+    description: "Allows you to use the DeadlyRadiation commands"
+    default: op
+commands:
+  radiation:
+    description: "Managing the DeadlyRadiation plugin"
+    usage: "/radiation help"
+    aliases: ["dr", "deadlyradiation"]

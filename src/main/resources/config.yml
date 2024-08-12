@@ -1,0 +1,92 @@
+#------------------------------------------------------------
+#|                                                          |
+#|      _  _______        __     __    _____   ____         |
+#|     | ||___ ___|      |  \   /  |  / ____| |  _ \        |
+#|     | |   | |   ___   | |\\ //| | | (___   | | \ \       |
+#|     | |   | |  / _ \  | | \_/ | |  \___ \  | |  ) )      |
+#|     | |   | | | (_) | | |     | |  ____) | | |_/ /       |
+#|     |_|   |_|  \___/  |_|     |_| |_____/  |____/        |
+#|                                                          |
+#|                                                          |
+#------------------------------------------------------------
+#|                 +==================+                     |
+#|                 |  DeadlyRadiation |                     |
+#|                 |------------------|                     |
+#|                 |        1.0       |                     |
+#|                 |------------------|                     |
+#|                 |  PolsatGraniePL  |                     |
+#|                 +==================+                     |
+#------------------------------------------------------------
+#
+# Hello, if you need help or have an idea that will improve our plugin,
+#                   then be sure to contact us:
+#
+#  IToMSD Website: https://itomsd.com/
+#  IToMSD Discord: https://dc.itomsd.com/
+#  IToMSD SpigotMC: https://www.spigotmc.org/resources/authors/itomsd.1983449/
+
+
+
+
+# deadly_radiation_flag_is_save_zone: true/false = The region where the "deadly-radiation" flag will be located will be a safe zone/radiation zone
+# deadly_radiation_enabled = Enables/Disables radiation
+# damage_per_tick = Amount of damage dealt in radiation zone per tick
+# blindness_effect = Whether to add blindness effect in radiation or not
+
+deadly_radiation_flag_is_save_zone: true
+deadly_radiation_enabled: false
+damage_per_tick: 2
+blindness_effect: true
+
+
+
+
+# lugola = Bossbar settings that will appear after drinking Lugola
+# radiation = Bossbar settings that will appear after entering the radiation zone
+
+bossbar:
+  lugola:
+    text: "&a&lProtected"
+    color: "GREEN"
+    color_in_radiation: "RED"
+    style: "SEGMENTED_20"
+  radiation:
+    text: "&c&lRadiation"
+    color: "RED"
+    style: "SEGMENTED_20"
+
+
+
+
+# Lugola Settings
+# name = Name of Item
+# lore = Description of Item
+# lugola_time = Lugola duration in seconds
+
+lugola:
+  name: "&rLugola"
+  lore:
+    - "&7Drink to become immune to radiation."
+lugola_time: 600
+
+
+
+
+# !!!Reload doesn't work for this section!!!
+# craft_lugola = Whether to create Lugola in crafting or not
+
+craft_lugola: true
+lugola-recipe:
+  line1: ["GLASS_BOTTLE", "REDSTONE", "GLASS_BOTTLE"]
+  line2: ["REDSTONE", "WATER_BUCKET", "REDSTONE"]
+  line3: ["GLASS_BOTTLE", "REDSTONE", "GLASS_BOTTLE"]
+
+
+
+
+# Messages
+
+no_permission: "&cYou do not have permission to perform this command."
+plugin_reloaded: "&aPlugin reloaded"
+unknown_command: "&aUnknown command. Use /radiation help for a list of commands."
+gave_lugola: "&aGave %amount% [Lugola] to %player%"
